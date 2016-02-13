@@ -14,7 +14,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityButton: UIButton!
+    @IBOutlet weak var weatherIcon: UIImageView!
     
     @IBAction func setCityTapped(sender: AnyObject) {
         openCityAlert()
@@ -39,7 +40,6 @@ class ViewController: UIViewController, WeatherServiceDelegate {
             style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
                 let textField = alert.textFields? [0]
                 let cityName = textField?.text
-                self.cityLabel.text = cityName
                 self.weatherService.getWeather(cityName!)
         }
         
@@ -55,11 +55,14 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     }
     
     func setWeather(weather: Weather) {
-        print("** Set Weather **")
-        print("City:\(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
-        cityLabel.text = weather.cityName
-        tempLabel.text = "\(weather.temp)"
+        //print("** Set Weather **")
+        //print("City:\(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
+        //cityLabel.text = weather.cityName
+        tempLabel.text = "\(weather.tempC)"
         descLabel.text = weather.description
+        cityButton.setTitle(weather.cityName, forState: .Normal)
+        weatherIcon.image = UIImage(named: weather.icon)
+        
     }
     
     override func viewDidLoad() {

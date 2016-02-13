@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -39,34 +39,28 @@
                                     <action selector="setCityTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lB-bs-Inx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-p5-HHx">
-                                <rect key="frame" x="20" y="150" width="560" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02n.png" translatesAutoresizingMaskIntoConstraints="NO" id="4jf-Pd-HEF">
+                                <rect key="frame" x="244" y="156" width="114" height="63"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hlj-ss-vbZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Ip-5a-ib6"/>
-                            <constraint firstItem="Lph-p5-HHx" firstAttribute="top" secondItem="FLg-zY-nlU" secondAttribute="bottom" constant="25" id="1GB-vW-zcu"/>
                             <constraint firstItem="FLg-zY-nlU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AdR-oY-BTF"/>
                             <constraint firstItem="dzi-qk-4ax" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Bdw-YO-ykk"/>
                             <constraint firstItem="Hlj-ss-vbZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FEn-we-N5X"/>
                             <constraint firstItem="dzi-qk-4ax" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="P5W-E5-ifB"/>
                             <constraint firstItem="FLg-zY-nlU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VNH-XJ-HK0"/>
                             <constraint firstItem="Hlj-ss-vbZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gQa-TY-k2u"/>
-                            <constraint firstItem="dzi-qk-4ax" firstAttribute="top" secondItem="Lph-p5-HHx" secondAttribute="bottom" constant="75" id="rEs-wY-X8B"/>
-                            <constraint firstItem="Lph-p5-HHx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rGG-4g-Usc"/>
-                            <constraint firstItem="Lph-p5-HHx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wvS-cQ-K1a"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cityLabel" destination="Lph-p5-HHx" id="vwO-f8-MiZ"/>
+                        <outlet property="cityButton" destination="dzi-qk-4ax" id="8nz-s9-7em"/>
                         <outlet property="descLabel" destination="FLg-zY-nlU" id="4eJ-Wb-5Hv"/>
                         <outlet property="tempLabel" destination="Hlj-ss-vbZ" id="niF-27-Jou"/>
+                        <outlet property="weatherIcon" destination="4jf-Pd-HEF" id="ge2-fS-hGv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,4 +68,7 @@
             <point key="canvasLocation" x="321" y="56"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="02n.png" width="50" height="50"/>
+    </resources>
 </document>
